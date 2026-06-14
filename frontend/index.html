@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lead Management CRM</title>
+    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container">
+
+<h1>Client Lead Management System</h1>
+
+<form id="leadForm">
+
+<input
+type="text"
+id="name"
+placeholder="Client Name"
+required>
+
+<br><br>
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+<br><br>
+
+<input
+type="text"
+id="source"
+placeholder="Lead Source"
+required>
+
+<br><br>
+
+<button type="submit">
+
+Add Lead
+
+</button>
+
+</form>
+<h2>All Leads</h2>
+<input
+type="text"
+id="search"
+placeholder="Search by name or email"
+onkeyup="searchLeads()">
+<select id="filterStatus">
+  <option value="All">All Leads</option>
+  <option value="New">New</option>
+  <option value="Contacted">Contacted</option>
+  <option value="Converted">Converted</option>
+</select>
+<h3>Dashboard Overview</h3>
+
+<div class="stats">
+
+  <div class="card">
+    <h4>Total Leads</h4>
+    <span id="total">0</span>
+  </div>
+
+  <div class="card">
+    <h4>New</h4>
+    <span id="new">0</span>
+  </div>
+
+  <div class="card">
+    <h4>Contacted</h4>
+    <span id="contacted">0</span>
+  </div>
+
+  <div class="card">
+    <h4>Converted</h4>
+    <span id="converted">0</span>
+  </div>
+
+</div>
+
+<table  id="leadsTable">
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Source</th>
+<th>Status</th>
+<th>Notes</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+<footer>
+    Developed by Ashwitha
+</footer>
+</html>
